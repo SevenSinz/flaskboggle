@@ -1,0 +1,19 @@
+{% block content %}    
+
+<div>
+    {% for row in board %}
+       <tr>
+        {% for char in row %}
+            
+        <td> {{char}} </td> 
+
+        {% endfor %}
+       </tr> <br>
+    {% endfor %}
+    </div>
+  <form action="/board" >
+    <input type="text" id="word" name="word-name"  > 
+      <button>submit</button>
+  </form>
+
+{% endblock %}
