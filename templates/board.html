@@ -1,19 +1,18 @@
-{% block content %}    
+{% extends 'base.html' %}
 
-<div>
+{% block content %}    
+<table>
     {% for row in board %}
        <tr>
-        {% for char in row %}
-            
-        <td> {{char}} </td> 
-
+        {% for char in row %} 
+        <td> {{char}} </td>
         {% endfor %}
-       </tr> <br>
+       </tr> 
     {% endfor %}
-    </div>
-  <form action="/board" >
-    <input type="text" id="word" name="word-name"  > 
+      </table>
+  <form id="guess-form">
+    <input type="text" id="guess-input" name="guess"  >   
       <button>submit</button>
-  </form>
+  </div>
 
 {% endblock %}
